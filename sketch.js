@@ -118,7 +118,7 @@ function keyPressed(){
 }
 
 async function getBackgroundImg(){
-    var response = await fetch("http://worldclockapi.com/api/json/mst/now");
+    var response = await fetch("http://worldclockapi.com/api/json/est/now");
     var responseJSON = await response.json();
 
     var datetime = responseJSON.currentDateTime;

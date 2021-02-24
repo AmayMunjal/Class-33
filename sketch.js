@@ -118,10 +118,10 @@ function keyPressed(){
 }
 
 async function getBackgroundImg(){
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+    var response = await fetch("http://worldclockapi.com/api/json/mst/now");
     var responseJSON = await response.json();
 
-    var datetime = responseJSON.datetime;
+    var datetime = responseJSON.currentDateTime;
     var hour = datetime.slice(11,13);
     
     if(hour>=0600 && hour<=1900){
